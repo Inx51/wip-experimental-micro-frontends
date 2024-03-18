@@ -1,0 +1,16 @@
+<aside id="default-sidebar"
+    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]"
+    aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div href="https://flowbite.com/" class="flex items-center ps-2.5 mb-5">
+            <img src="/assets/placeholders/images/logo.png" class="h-6 me-3 sm:h-7" alt="Flowbite Logo" />
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Rant-around</span>
+        </div>
+        <ul class="space-y-2 font-medium">
+            <channel-list-item *ngFor="let channel of channels" (onActive)="updateActiveItem($event)" [hasUnviewedMessages]="channel.hasUnviewedMessages" [activeUsers]="channel.activeUsers" label="{{channel.label}}" image="{{channel.image}}" [active]="channel.active"></channel-list-item>
+            <!-- <channel-list-item [activeUsers]="0" label="Animals" image="/assets/placeholders/images/icon-animals-1.jpg"></channel-list-item>
+            <channel-list-item [hasUnviewedMessages]="true" [activeUsers]="3" label="Gaming" image="/assets/placeholders/images/icon-gaming-1.jpg"></channel-list-item>
+            <channel-list-item [active]="true" [activeUsers]="2" label="Cars" image="/assets/placeholders/images/icon-cars-1.png"></channel-list-item> -->
+        </ul>
+    </div>
+</aside>
