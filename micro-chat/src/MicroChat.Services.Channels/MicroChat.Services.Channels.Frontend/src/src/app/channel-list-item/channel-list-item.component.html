@@ -1,5 +1,5 @@
 <li>
-    <a (click)="setActive(label)" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer" [ngClass]="{'bg-gray-700': active}">
+    <a (click)="setActive(id)" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer" [ngClass]="{'bg-gray-700': active}">
         <img class="w-10 h-10 rounded-full" src="{{image}}">
         <span class="ms-3 text-xs bg-gray-700 pl-3 pr-3 pt-1 pb-1 rounded-xl" *ngIf="activeUsers > 0" [ngClass]="{'bg-gray-500': active}" >
             <span class="inline-flex items-center justify-center w-2 h-2 me-1 text-xs font-semibold text-blue-800 bg-green-300 rounded-full"> </span> {{activeUsers}}

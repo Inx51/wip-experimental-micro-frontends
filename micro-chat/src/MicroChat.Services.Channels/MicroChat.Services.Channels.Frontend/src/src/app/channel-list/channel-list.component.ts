@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ChannelListItemComponent } from '../channel-list-item/channel-list-item.component';
 import { ChannelListItem } from '../channel-list-item/channelListItem';
 import { CommonModule } from '@angular/common';
+import { ChannelsserviceService } from '../channelsservice.service';
+import { HubConnection, HubConnectionBuilder, LogLevel } from '@microsoft/signalr';
+import { Settings } from '../../settings';
 
 @Component({
   selector: 'channel-list',
@@ -15,50 +18,48 @@ import { CommonModule } from '@angular/common';
 })
 export class ChannelListComponent {
 
-  channels: ChannelListItem[] = [
-    {
-      name:"Food",
-      active:false,
-      activeUsers:13,
-      hasUnviewedMessages:false,
-      image:"/assets/placeholders/images/icon-food-1.jpg",
-      label:"Food"
-    },
-    {
-      name:"Animals",
-      active:false,
-      activeUsers:0,
-      hasUnviewedMessages:false,
-      image:"/assets/placeholders/images/icon-animals-1.jpg",
-      label:"Animals"
-    },
-    {
-      name:"Gaming",
-      active:false,
-      activeUsers:3,
-      hasUnviewedMessages:true,
-      image:"/assets/placeholders/images/icon-gaming-1.jpg",
-      label:"Gaming"
-    },
-    {
-      name:"Cars",
-      active:false,
-      activeUsers:2,
-      hasUnviewedMessages:false,
-      image:"/assets/placeholders/images/icon-cars-1.png",
-      label:"Cars"
-    },
-  ]
+  channels: ChannelListItem[] | undefined;
+  hubConnection: HubConnection;
+  channelsService = inject(ChannelsserviceService);
 
-  updateActiveItem (label: string):void {
-    this.channels.forEach(channel => {
-      console.log(channel.label);
-      if(channel.label == label) {
-        channel.active = true;
-      } else {
-        channel.active = false;
-      }
+  constructor() {
+    this.channelsService.getChannels().then(channels => {
+      this.channels = channels
     });
+
+    this.hubConnection = new HubConnectionBuilder().withUrl(`${Settings.ChannelsBaseEndpoint}/hubs/channel`).build();
+    
+    this.hubConnection.on('ChannelCreated', (message) => {
+      let c:ChannelListItem = {
+        id:message.id,
+        name:message.name,
+        image:message.image,
+        active:false,
+        activeUsers:0,
+        hasUnviewedMessages:false
+      };
+      this.channels?.push(c)
+    });
+    this.hubConnection.on('ChannelDeleted', (message) => {
+      this.channels = this.channels?.filter(c => c.id != message);
+    });
+
+    this.hubConnection.start().catch((err) => document.write(err));
+  }
+
+  updateActiveItem(id: number): void {
+    if (this.channels === undefined) {
+      console.debug("Failed with channels!");
+    }
+    else {
+      this.channels.forEach(channel => {
+        if (channel.id == id) {
+          channel.active = true;
+        } else {
+          channel.active = false;
+        }
+      });
+    }
   }
 
 }

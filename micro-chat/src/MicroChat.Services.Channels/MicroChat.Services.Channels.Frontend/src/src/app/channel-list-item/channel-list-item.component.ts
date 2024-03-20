@@ -22,8 +22,9 @@ export class ChannelListItemComponent {
   @Input() activeUsers = 0;
   @Input() hasUnviewedMessages = false;
   @Input() active = false;
+  @Input() id = 0;
 
-  @Output() onActive = new EventEmitter<string>();
+  @Output() onActive = new EventEmitter<number>();
 
   public setActive(label: any): void {
     this.onActive.emit(label);

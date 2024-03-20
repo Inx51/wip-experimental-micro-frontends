@@ -7,10 +7,7 @@
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Rant-around</span>
         </div>
         <ul class="space-y-2 font-medium">
-            <channel-list-item *ngFor="let channel of channels" (onActive)="updateActiveItem($event)" [hasUnviewedMessages]="channel.hasUnviewedMessages" [activeUsers]="channel.activeUsers" label="{{channel.label}}" image="{{channel.image}}" [active]="channel.active"></channel-list-item>
-            <!-- <channel-list-item [activeUsers]="0" label="Animals" image="/assets/placeholders/images/icon-animals-1.jpg"></channel-list-item>
-            <channel-list-item [hasUnviewedMessages]="true" [activeUsers]="3" label="Gaming" image="/assets/placeholders/images/icon-gaming-1.jpg"></channel-list-item>
-            <channel-list-item [active]="true" [activeUsers]="2" label="Cars" image="/assets/placeholders/images/icon-cars-1.png"></channel-list-item> -->
+            <channel-list-item *ngFor="let channel of channels" (onActive)="updateActiveItem($event)" [hasUnviewedMessages]="channel.hasUnviewedMessages" [activeUsers]="channel.activeUsers" label="{{channel.name}}" image="{{channel.image}}" [active]="channel.active" [id]="channel.id"></channel-list-item>
         </ul>
     </div>
 </aside>

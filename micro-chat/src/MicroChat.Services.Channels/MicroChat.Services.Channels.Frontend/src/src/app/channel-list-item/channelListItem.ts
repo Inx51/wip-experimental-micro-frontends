@@ -1,6 +1,6 @@
 export interface ChannelListItem {
+    id:number,
     name:string,
-    label:string;
     image:string;
     activeUsers:number;
     hasUnviewedMessages:boolean;

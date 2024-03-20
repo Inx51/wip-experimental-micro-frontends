@@ -18,7 +18,7 @@ public class DeleteChannelEndpoint : Endpoint<DeleteChannelRequestModel>
     
     public override void Configure()
     {
-        Delete("/channels/");
+        Delete("/channels/{id}");
         AllowAnonymous();
     }
 

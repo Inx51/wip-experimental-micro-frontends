@@ -1,0 +1,13 @@
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\bin\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.deps.json
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\bin\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.dll
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\bin\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.pdb
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.AssemblyInfo.cs
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.sourcelink.json
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.dll
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\refint\MicroChat.Aspire.ServiceDefaults.dll
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\MicroChat.Aspire.ServiceDefaults.pdb
+C:\Users\matand\Desktop\wip-experimental-micro-frontends\micro-chat\src\MicroChat.Aspire\MicroChat.Aspire\MicroChat.Aspire.ServiceDefaults\obj\Debug\net8.0\ref\MicroChat.Aspire.ServiceDefaults.dll
